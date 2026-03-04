@@ -1,4 +1,4 @@
-name: tftest-baseline-plan
+name: tftest-baseline-apply
 
 on:
   workflow_dispatch:
@@ -41,4 +41,4 @@ jobs:
 
       # Run each test file explicitly so failures are obvious
       - name: Test - Storage modes (apply)
-        run: terraform test -filter=tests/baseline-plan.tftest.hcl -verbose
+        run: terraform test -filter=tests/baseline-apply.tftest.hcl -verbose
