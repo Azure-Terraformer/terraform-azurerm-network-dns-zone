@@ -8,7 +8,7 @@ module "dns" {
   tags                 = var.tags
   zones = {
     openai = "privatelink.openai.azure.com"
-    cog     = "privatelink.cognitiveservices.azure.com"
-    ais = "privatelink.services.ai.azure.com"
+    cog    = "privatelink.cognitiveservices.azure.com"
+    ais    = "privatelink.services.ai.azure.com"
   }
 }
