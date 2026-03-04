@@ -1,4 +1,4 @@
-name: tftest-baseline-apply-multiple
+name: tftest-keyvault
 
 on:
   workflow_dispatch:
