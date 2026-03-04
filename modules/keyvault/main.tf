@@ -9,11 +9,6 @@ module "dns" {
   registration_enabled = var.registration_enabled
   tags                 = var.tags
   zones = {
-    blob  = "privatelink.blob.core.windows.net"
-    queue = "privatelink.queue.core.windows.net"
-    table = "privatelink.table.core.windows.net"
-    file  = "privatelink.file.core.windows.net"
-    dfs   = "privatelink.dfs.core.windows.net"
-    web   = "privatelink.web.core.windows.net"
+    vaultcore = "privatelink.vaultcore.azure.net"
   }
 }

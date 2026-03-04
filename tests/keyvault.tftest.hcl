@@ -1,18 +1,17 @@
 variables {
   location    = "eastus"
-  name_prefix = "tf-multi-privdns"
+  name_prefix = "tf-test-ca-dns"
 }
 
 provider "azurerm" {
   features {}
 }
 
-
 run "act" {
   command = apply
 
   module {
-    source = "./examples/baseline-multiple"
+    source = "./examples/keyvault"
   }
 
   variables {

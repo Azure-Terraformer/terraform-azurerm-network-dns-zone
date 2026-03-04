@@ -8,6 +8,14 @@ variable "virtual_network_id" {
   description = "VNet ID to link the Private DNS Zones to."
 }
 
+variable "domain_suffix" {
+  type = string
+}
+
+variable "locations" {
+  type = set(string)
+}
+
 variable "registration_enabled" {
   type    = bool
   default = false

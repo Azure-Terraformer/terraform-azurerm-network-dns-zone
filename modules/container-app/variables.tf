@@ -8,14 +8,8 @@ variable "virtual_network_id" {
   description = "VNet ID to link the Private DNS Zones to."
 }
 
-variable "name_prefix" {
-  type        = string
-  description = "Prefix used to build link names (e.g. app-env)."
-}
-
-variable "regions" {
-  type        = set(string)
-  description = "Azure regions to create Container Apps private DNS zones for (e.g. eastus, westus2)."
+variable "locations" {
+  type = set(string)
 }
 
 variable "registration_enabled" {
