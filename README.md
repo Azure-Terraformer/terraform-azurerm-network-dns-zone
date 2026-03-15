@@ -12,3 +12,5 @@ Setup DNS Zones for common Azure Services
 - Cosmos DB ![cosmos](https://github.com/Azure-Terraformer/terraform-azurerm-network-dns-zone/actions/workflows/tftests-cosmos.yaml/badge.svg)
 - Container Apps ![container-app](https://github.com/Azure-Terraformer/terraform-azurerm-network-dns-zone/actions/workflows/tftests-container-app.yaml/badge.svg)
 - AI Services ![ai](https://github.com/Azure-Terraformer/terraform-azurerm-network-dns-zone/actions/workflows/tftests-ai.yaml/badge.svg)
+
+## Feedback
