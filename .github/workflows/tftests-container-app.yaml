@@ -5,8 +5,12 @@ on:
   - cron: '0 9 * * 1'
   workflow_dispatch:
   pull_request:
+    paths:
+      - 'modules/**'
   push:
     branches: [ main ]
+    paths:
+      - 'modules/**'
 
 jobs:
   terraform-tests:
