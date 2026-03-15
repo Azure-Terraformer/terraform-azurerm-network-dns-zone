@@ -1,5 +1,5 @@
 module "setup" {
-  source = "../../modules/setup"
+  source = "../../testing/setup"
 
   name_prefix = var.name_prefix
   location    = var.location
