@@ -5,12 +5,12 @@ resource "random_string" "suffix" {
 }
 
 resource "azurerm_resource_group" "test" {
-  name     = "${var.name_prefix}-rg-${random_string.suffix.result}"
+  name     = "rg-${var.name_prefix}-${random_string.suffix.result}"
   location = var.location
 }
 
 resource "azurerm_virtual_network" "test" {
-  name                = "${var.name_prefix}-vnet-${random_string.suffix.result}"
+  name                = "vnet-${var.name_prefix}-${random_string.suffix.result}"
   location            = azurerm_resource_group.test.location
   resource_group_name = azurerm_resource_group.test.name
   address_space       = ["10.250.0.0/16"]
