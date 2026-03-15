@@ -8,20 +8,21 @@ variable "virtual_network_id" {
   description = "VNet ID to link the Private DNS Zones to."
 }
 
-# Optional: choose a subset. If null/empty => create all.
-# Valid values: blob, queue, table, file, dfs, web
+# Optional: provide a map of logical name => DNS zone FQDN. If null/empty => create all.
 variable "zones" {
   type        = map(string)
   default     = null
-  description = "Which storage endpoints to create DNS zones for. Null means all."
+  description = "Map of logical endpoint name to Private DNS Zone FQDN to create and link. When null, the calling module determines the full set of zones."
 }
 
 variable "registration_enabled" {
-  type    = bool
-  default = false
+  type        = bool
+  description = "Whether auto-registration of VM DNS records in the zone is enabled."
+  default     = false
 }
 
 variable "tags" {
-  type    = map(string)
-  default = {}
+  type        = map(string)
+  description = "Tags to apply to all resources created by this module."
+  default     = {}
 }

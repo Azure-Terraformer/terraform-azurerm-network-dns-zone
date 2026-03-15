@@ -25,6 +25,7 @@ variable "registration_enabled" {
 }
 
 variable "tags" {
-  type    = map(string)
-  default = {}
+  type        = map(string)
+  description = "Tags to apply to all resources created by this module."
+  default     = {}
 }

@@ -9,15 +9,18 @@ variable "virtual_network_id" {
 }
 
 variable "locations" {
-  type = set(string)
+  type        = set(string)
+  description = "Set of Azure regions for which regional Container App private DNS zones will be created."
 }
 
 variable "registration_enabled" {
-  type    = bool
-  default = false
+  type        = bool
+  description = "Whether auto-registration of VM DNS records in the zone is enabled."
+  default     = false
 }
 
 variable "tags" {
-  type    = map(string)
-  default = {}
+  type        = map(string)
+  description = "Tags to apply to all resources created by this module."
+  default     = {}
 }
