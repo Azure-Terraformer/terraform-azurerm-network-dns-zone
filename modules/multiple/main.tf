@@ -4,7 +4,7 @@ module "dns" {
   for_each = var.zones
 
   # Adjust path if your base module lives elsewhere
-  source = "../../"
+  source = "../.."
 
   resource_group_name = var.resource_group_name
   virtual_network_id  = var.virtual_network_id
